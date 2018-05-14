@@ -1,0 +1,2 @@
+class BikeRent < ApplicationRecord
+end
