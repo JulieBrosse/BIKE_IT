@@ -17,8 +17,12 @@ ActiveRecord::Schema.define(version: 20180514152855) do
 
   create_table "bike_rents", force: :cascade do |t|
     t.date "booking_date"
+    t.bigint "renter_id"
+    t.bigint "bike_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["bike_id"], name: "index_bike_rents_on_bike_id"
+    t.index ["renter_id"], name: "index_bike_rents_on_renter_id"
   end
 
   create_table "bikes", force: :cascade do |t|
@@ -26,8 +30,10 @@ ActiveRecord::Schema.define(version: 20180514152855) do
     t.string "title"
     t.integer "price"
     t.boolean "availability"
+    t.bigint "tenant_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["tenant_id"], name: "index_bikes_on_tenant_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -49,4 +55,5 @@ ActiveRecord::Schema.define(version: 20180514152855) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bike_rents", "bikes"
 end

@@ -5,7 +5,7 @@ class CreateBikes < ActiveRecord::Migration[5.1]
       t.string :title
       t.integer :price
       t.boolean :availability
-
+      t.references :tenant, references: :users, index: true
       t.timestamps
     end
   end
