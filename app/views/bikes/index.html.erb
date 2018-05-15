@@ -1,8 +1,8 @@
 <h1>Bikes</h1>
 
 <% @bikes.each do |bike| %>
-  <% if bike.picture %>
-  <div class="card-header" style="background-image: url('<%= image_path bike.picture%>')">
-  </div>
+<%= link_to bike.title, bike_path(bike) %>
+<%= image_tag(bike.picture) %>
+
 <% end %>
 
