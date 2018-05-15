@@ -12,6 +12,7 @@ class BikesController < ApplicationController
 
   def show
     @bike = Bike.find(params[:id])
+    @bike_rent = BikeRent.new
   end
 
   def create
@@ -30,7 +31,7 @@ class BikesController < ApplicationController
   private
 
   def bike_params
-    params.require(:bike).permit(:title, :price, :availability, :description)
+    params.require(:bike).permit(:name, :description, :address, :price, :availability, :tenant_id)
 
   end
 
