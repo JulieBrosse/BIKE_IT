@@ -1,10 +1,4 @@
-<form>
-  <div class="form-inline">
-    <div class="col-md-12 col-xs-6">
-      <input type="text" class="form-control" placeholder="City">
-    </div>
-    <div class="col-md-12 col-xs-6">
-      <%= link_to 'Find a bike', bikes_path, class: 'btn btn-success' %>
-    </div>
-  </div>
-</form
+<%= simple_form_for :search, url: bikes_path, method: :get do |f| %>
+  <%= f.input :address %>
+  <%= f.button :submit %>
+<% end %>
