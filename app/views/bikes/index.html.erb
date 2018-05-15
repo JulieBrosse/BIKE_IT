@@ -1,0 +1,5 @@
+<h1>Bikes</h1>
+
+<% @bikes.each do |bikes| %>
+<h4><%= link_to bike.title, bike_path(bike) %></h4>
+<% end %>
