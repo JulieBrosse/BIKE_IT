@@ -173,11 +173,7 @@ bikes = [
 
 Bike.create!(bikes)
 
-<<<<<<< HEAD
-BikeRent.create(booking_date: Date.today, renter: francis, bike: Bike.first)
-=======
-BikeRent.create(booking_date: Date.today, renter: francis, bike: Bike.last)
->>>>>>> master
 
+BikeRent.create(booking_date: Date.today, renter: francis, bike: Bike.first)
 
 
