@@ -2,16 +2,14 @@
   <div class="banner-center-title">
     <h1>B I K E &nbsp; &nbsp;I T</h1>
     <p>Unique place to rent a bike around the world.</p>
-    <form class="form-inline">
-      <div class="banner-content">
-        <div class= "banner-form">
-        <%= simple_form_for :search, url: bikes_path, method: :get do |f| %>
-        <%= f.input :address %> </div>
-        <div class= "banner-button">
-        <%= f.button :submit, class: "btn btn-success", value: "Find a bike!" %> </div>
+    <div class="banner-content">
+      <div class= "banner-form">
+        <%= simple_form_for :search, url: bikes_path, method: :get, html: { class: 'form-inline' } do |f| %>
+          <%= f.input :address, label: false %>
+          <%= f.button :submit, class: "btn btn-success", value: "Find a bike!" %>
         <% end %>
       </div>
-    </form>
+    </div>
     <%= link_to 'Rent a bike', bike_rents_path, class: "btn btn-primary" %>
   </div>
 </div>
