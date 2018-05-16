@@ -3,7 +3,7 @@ class BikesController < ApplicationController
   def index
     if params[:search].present?
       address = params[:search][:address]
-      @bikes = Bike.where(address: address)
+      @bikes = Bike.where(address.includes(:address))
     else
       @bikes = Bike.all
     end
@@ -18,7 +18,7 @@ class BikesController < ApplicationController
   def create
     @bike = Bike.new(bike_params)
       if @bike.save
-        redirect_to bikes_rents_path
+        redirect_to bike_rents_path
       end
   end
 
@@ -32,7 +32,6 @@ class BikesController < ApplicationController
 
   def bike_params
     params.require(:bike).permit(:name, :description, :address, :price, :availability, :tenant_id)
-
   end
 
 end
