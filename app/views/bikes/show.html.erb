@@ -1,10 +1,12 @@
-<div class="card">
-  <%= @bike.title %>
-  <%= image_tag(@bike.picture) %>
-  <%= @bike.description %>
-</div>
+<div class="container">
+  <div class="card">
+    <div class="picture">
+     <%= image_tag(@bike.picture, class: "bike-picture") %>
+   </div>
+    <h2><%= @bike.title %></h2>
+    <p><%= @bike.description %></p>
+  </div>
 
-<<<<<<< HEAD
 <%= @bike.title %>
 <%= image_tag(@bike.picture) %>
 <%= @bike.description %>
@@ -13,11 +15,14 @@
 <%= f.input date_field :date %>
 <%= f.submit %>
 <% end %>
-=======
+  
 <div class="form">
   <%= simple_form_for @bike_rent do |f| %>
   <%= f.date_field :booking_date %>
   <%= f.submit "Book now!", class: "btn btn-success" %>
+
+  <%= simple_form_for @bike_rent, html: { class: "my-simple_form" } do |f| %>
+    <%= f.input :booking_date, html5: true  %>
+    <%= f.submit "Book now!", class: "btn btn-success" %>
   <% end %>
 </div>
->>>>>>> master
