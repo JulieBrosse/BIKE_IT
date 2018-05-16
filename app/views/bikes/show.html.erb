@@ -7,6 +7,20 @@
     <p><%= @bike.description %></p>
   </div>
 
+<%= @bike.title %>
+<%= image_tag(@bike.picture) %>
+<%= @bike.description %>
+
+<% simple_form_for @bike_rents do |f| %>
+<%= f.input date_field :date %>
+<%= f.submit %>
+<% end %>
+  
+<div class="form">
+  <%= simple_form_for @bike_rent do |f| %>
+  <%= f.date_field :booking_date %>
+  <%= f.submit "Book now!", class: "btn btn-success" %>
+
   <%= simple_form_for @bike_rent, html: { class: "my-simple_form" } do |f| %>
     <%= f.input :booking_date, html5: true  %>
     <%= f.submit "Book now!", class: "btn btn-success" %>
