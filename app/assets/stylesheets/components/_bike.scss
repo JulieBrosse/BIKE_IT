@@ -1,15 +1,23 @@
-.card {
+.container {
   display: flex;
+  align-items: right;
+  justify-content: space-around;
+  h2 {
+    font-weight: bold;
+    font-size: 35px;
+  }
+
+  p {
+    font-size: 20px;
+  }
 }
 
+.my-simple_form {
+  width: 300px;
+  margin: 80px 10px;
+}
 
 .bike-picture {
-  position: cover;
-
-}
-
-.form {
-  position: relative;
-  top: 50px;
-  right: 40px;
+  height: 500px;
+  margin-top: 20px;
 }
