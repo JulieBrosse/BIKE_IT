@@ -1,4 +1,5 @@
 class BikeRentsController < ApplicationController
+
  def index
   @bike_rents = current_user.bike_rents
   @bikes_rented = BikeRent.includes(:bike).where(bike: current_user.bikes)

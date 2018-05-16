@@ -4,8 +4,10 @@ Rails.application.routes.draw do
   resources :bikes, only: [:index, :show, :create, :update] do
     resources :bike_rents, only: [:create, :update]
   end
-  resources :bike_rents, only: [:index]
 
+  authenticate :user do
+  resources :bike_rents, only: [:index]
+  end
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
