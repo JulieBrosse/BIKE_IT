@@ -2,7 +2,7 @@
 <%= image_tag(@bike.picture) %>
 <%= @bike.description %>
 
-<% simple_form_for @bike_rent do |f| %>
+<% simple_form_for @bike_rents do |f| %>
 <%= f.input date_field :date %>
 <%= f.submit %>
 <% end %>
