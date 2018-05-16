@@ -3,7 +3,7 @@ class BikesController < ApplicationController
   def index
     if params[:search].present?
       address = params[:search][:address]
-      @bikes = Bike.where(address.includes(:address))
+      @bikes = Bike.where(address: address)
     else
       @bikes = Bike.all
     end
