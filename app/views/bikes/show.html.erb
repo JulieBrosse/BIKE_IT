@@ -1,2 +1,10 @@
 <h1>Coucou</h1>
 
+<%= @bike.title %>
+<%= image_tag(@bike.picture) %>
+<%= @bike.description %>
+
+<% simple_form_for @bike_rent do |f| %>
+<%= f.input date_field :date %>
+<%= f.submit %>
+<% end %>
