@@ -65,5 +65,7 @@ bikes = [
 
 Bike.create!(bikes)
 
+BikeRent.create(booking_date: Date.today, renter: francis, bike: Bike.first)
+
 
 

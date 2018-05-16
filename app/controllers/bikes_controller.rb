@@ -18,7 +18,7 @@ class BikesController < ApplicationController
   def create
     @bike = Bike.new(bike_params)
       if @bike.save
-        redirect_to bikes_rents_path
+        redirect_to bike_rents_path
       end
   end
 
