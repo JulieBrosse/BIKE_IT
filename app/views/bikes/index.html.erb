@@ -1,8 +1,26 @@
-<h1>Bikes</h1>
 
-<% @bikes.each do |bike| %>
-<%= link_to bike.title, bike_path(bike) %>
-<%= image_tag(bike.picture) %>
 
-<% end %>
 
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>All Bikes</h1>
+
+        <ul>
+        <% @bikes.each do |bike| %>
+          <div class="col-xs-12 col-sm-4">
+          <div class="card text-center">
+          <% if bike.picture %>
+            <div class="card-header" style="background-image: url(<%= image_path bike.picture%>">
+            </div>
+          <% end %>
+          <div class="card-body">
+            <%= link_to bike.title, bike_path(bike) %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
