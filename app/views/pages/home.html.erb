@@ -5,12 +5,12 @@
     <div class="banner-content">
       <div class= "banner-form">
         <%= simple_form_for :search, url: bikes_path, method: :get, html: { class: 'form-inline' } do |f| %>
-          <%= f.input :address, label: false %>
-          <%= f.button :submit, class: "btn btn-success", value: "Find a bike!" %>
+          <%= f.input :address, label: false, placeholder: "Paris, Bordeaux, ..." %>
+          <%= f.button :submit, class: "btn btn-success", value: "Trouver un vélo !" %>
         <% end %>
       </div>
     </div>
-    <%= link_to 'Rent a bike', bike_rents_path, class: "btn btn-primary" %>
+    <%= link_to 'Louer un vélo', bike_rents_path, class: "btn btn-primary" %>
   </div>
 </div>
 
