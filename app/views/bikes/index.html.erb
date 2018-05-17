@@ -7,7 +7,7 @@
   <div class="row">
     <% @bikes.each do |bike| %>
       <div class="col-xs-3 col-md-4">
-        <div class="card" style="background-image: url(<%= bike.picture %>);">
+        <div class="card" style="background-image: url(<%= cl_image_path bike.picture %>);">
           <h2><%= link_to bike.title, bike_path(bike) %></h2>
         </div>
       </div>
