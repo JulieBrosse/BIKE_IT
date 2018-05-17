@@ -31,6 +31,8 @@ class BikesController < ApplicationController
     @bike = Bike.new(bike_params)
       if @bike.save
         redirect_to bike_rents_path
+      # else
+      #   render "New"
       end
   end
 
