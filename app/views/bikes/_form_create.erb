@@ -1,9 +1,9 @@
-<%= simple_form_for(@bike) do |f| %>
-  <%= f.input :title %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.input :availability %>
-  <%= f.input :picture %>
-  <%= f.input :picture_cache, as: :hidden %>
-  <%= f.submit "Add a Bike to Rent", class: "btn btn-primary" %>
-<% end %>
+  <%= simple_form_for(@bike) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :price %>
+    <%= f.input :availability %>
+    <%= f.input :picture %>
+    <%= f.input :picture_cache, as: :hidden %>
+    <%= f.submit "Add your Bike to Rent", class: "btn btn-success btn-lg center-block" %>
+  <% end %>
