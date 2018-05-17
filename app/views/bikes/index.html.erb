@@ -10,7 +10,7 @@
             <div class="card-body">
               <ul>
                 <li> <%= link_to bike.title, bike_path(bike) %></li>
-                <li> <%= bike.description.truncate_words(20) %></li>
+                <li> <%= bike.description.truncate_words(15) %></li>
                 <li> <strong> <%= bike.price %>$/day</strong></li>
              </ul>
           </div>
