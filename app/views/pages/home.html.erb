@@ -3,9 +3,9 @@
     <h1>B I K E &nbsp; &nbsp;I T</h1>
     <p>Unique place to rent a bike around the world.</p>
     <div class="banner-content">
-      <div class= "banner-form">
+      <div class= "banner-form" >
         <%= simple_form_for :search, url: bikes_path, method: :get, html: { class: 'form-inline' } do |f| %>
-          <%= f.input :address, label: false %>
+          <%= f.input :address, label: false, input_html: { id: 'button-autocomplete'} %>
           <%= f.button :submit, class: "btn btn-success", value: "Find a bike!" %>
         <% end %>
       </div>

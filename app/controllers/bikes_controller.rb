@@ -1,13 +1,21 @@
 class BikesController < ApplicationController
 
   def index
+
     if params[:search].present?
-      address = params[:search][:address]
-      @bikes = Bike.where("address ILIKE ?", "%#{params[:address]}%")
+      @bikes = Bike.near(params["search"]["address"], 20)
     else
       @bikes = Bike.all
     end
+    @markers = @bikes.map do |bike|
+      {
+        lat: bike.latitude,
+        lng: bike.longitude#,
+      }
+    end
   end
+
+
 
 
   def show

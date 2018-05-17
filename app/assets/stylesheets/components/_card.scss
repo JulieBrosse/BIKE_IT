@@ -1,22 +1,40 @@
 .card {
-  background-size: cover;
-  background-position: center;
-  height: 150px;
+
+  background: white;
+  margin-bottom: 10px;
   border-radius: 1px;
-  margin: 15px 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  display: flex;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  text-align: center;
+  align-items: center;
+  border: 1px solid;
   align-items: center;
   justify-content: space-around;
-  color: white;
-  font-weight: bolder;
-  text-shadow: 0 0 10px rgba(0,0,0,0.7);
-  opacity: 0.8;
-  text-align: center;
 
-  a {
-  font-size: 24px;
-  color: white;
-  font-weight: bold;
 }
+.card-header {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+
+}
+.card-body {
+  height: 140px;
+  margin: 10px;
+  align-items: center;
+  text-justify: center;
+  vertical-align: middle;
+
+  ul {
+    list-style:none;
+    margin-left:0;
+    padding-left:0;
+
+    li {
+      word-wrap: break-word;
+      text-overflow: ellipsis;
+    }
+  }
+
+
+
 }
