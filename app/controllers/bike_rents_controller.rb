@@ -1,15 +1,24 @@
 class BikeRentsController < ApplicationController
 
- def index
-  @bike_rents = current_user.bike_rents
-  @bikes_rented = BikeRent.includes(:bike).where(bike: current_user.bikes)
 
- end
+  # if current user is a user (renter or tenant) :
+  # - form to create a bike
+  # - list the rents with validation profile
+  # - can update the validation profile
 
- # def create
- #  @bike_rent = BikeRent.find(params[:id])
- #  @bike_rent.save
- # end
+  # when update from the tenant > changing for the renter
+  # when update from the renter > changing for the tenant
+
+  def index
+    @bike_rents = current_user.bike_rents
+    @bikes_rented = BikeRent.includes(:bike).where(bike: current_user.bikes)
+    @bike = Bike.new
+  end
+
+  def create
+    @bike_rent = BikeRent.find(params[:id])
+    @bike_rent.save
+  end
 
  # def update
  #  @bike_rent = BikeRent.find(params[:id])
