@@ -173,8 +173,12 @@ bikes = [
     },
 ]
 
-Bike.create!(bikes)
+bikes.each do |bike_hash|
+  bike = Bike.create!(title: bike_hash[:title], description: bike_hash[:description], address: bike_hash[:address], price: bike_hash[:price], tenant: bike_hash[:tenant])
+  bike.remote_picture_url = bike_hash[:picture]
+  bike.save
 
+end
 
 BikeRent.create(booking_date: Date.today, renter: francis, bike: Bike.first)
 
