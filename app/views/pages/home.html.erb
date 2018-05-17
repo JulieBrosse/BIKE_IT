@@ -1,18 +1,18 @@
-<div class="banner" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 30%), url('https://fr.best-wallpaper.net/wallpaper/1920x1080/1309/Florence-Toscana-Italy-city-street-house-bike-sunrise_1920x1080.jpg');">
+<div class="banner" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 30%), url('http://i.huffpost.com/gen/1531803/images/o-BIKE-CITY-facebook.jpg');">
   <div class="banner-center-title">
     <h1>B I K E &nbsp; &nbsp;I T</h1>
       <p>Unique place to rent a bike around the world.</p>
       <div class="banner-content">
         <div class= "banner-form">
         <%= simple_form_for :search, url: bikes_path, method: :get, html: { class: 'form-inline' } do |f| %>
-          <%= f.input :address, label: false %>
-          <%= f.button :submit, class: "btn btn-success", value: "Find a bike!" %>
+          <%= f.input :address, label: false, placeholder: "Paris, Bordeaux, ..." %>
+          <%= f.button :submit, class: "btn btn-success", value: "Trouver un vélo !" %>
         <% end %>
         </div>
       </div>
-    <%= link_to 'Rent a bike', bike_index_path, class: "btn btn-primary" %>
+    <%= link_to 'Rent a bike', new_bike_path, class: "btn btn-primary" %>
+    </div>
   </div>
-</div>
 
 
 
