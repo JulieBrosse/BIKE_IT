@@ -15,6 +15,10 @@ class BikesController < ApplicationController
     end
   end
 
+  def new
+    @bike = Bike.new
+  end
+
 
 
 
@@ -39,7 +43,7 @@ class BikesController < ApplicationController
   private
 
   def bike_params
-    params.require(:bike).permit(:name, :description, :address, :price, :availability, :tenant_id)
+    params.require(:bike).permit(:name, :description, :price, :availability, :picture, :tenant_id)
   end
 
 end
