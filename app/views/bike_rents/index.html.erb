@@ -1,21 +1,21 @@
-<div class="rented_bikes">
-  <ul>
+<div class="contentt">
+  <div class="row">
     <% @bike_rents.each do |rent| %>
-      <li>
-        <%= rent.bike.title %>
-      </li>
-      <li>
-        <p> Date: <%= rent.booking_date %></p>
-      </li>
-      <li>
-        Owner: <%= rent.bike.tenant.name %>
-      </li>
-      <li>
-        <%= cl_image_tag(rent.bike.picture, class: "rented_picture") %>
-      </li>
+      <div class="col-xs-4">
+        <div class="card card-blog">
+          <%= cl_image_tag(rent.bike.picture, class: "card-header", id: 'toto') %>
+            <div class="card-body">
+                <h4 class="card-caption style="text-decoration:none"> <%= rent.bike.title %></h4>
+                <p class="card-description"> Date: <%= rent.booking_date %></p>
+                <p class="card-price"> <strong> Owner: <%= rent.bike.tenant.name %></strong></p>
+            </div>
+        </div>
+      </div>
     <% end %>
-  </ul>
+  </div>
 </div>
+
+
 
 
 
