@@ -9,7 +9,7 @@
   <div class="row">
     <% @bikes.each do |bike| %>
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-        <div class="card card blog">
+        <div class="carding card-blog">
             <div class="card-header" style="background-image: url(<%= cl_image_path bike.picture %>);">
             </div>
             <div class="card-body">
@@ -18,9 +18,9 @@
                 <p class="card-price"> <strong> <%= bike.price %>€/day</strong></p>
             </div>
         </div>
-      <% end %>
+      </div>
+    <% end %>
     </div>
-  </div>
   <div id="map" data-markers="<%= @markers.to_json %>" ></div>
 </div>
 
