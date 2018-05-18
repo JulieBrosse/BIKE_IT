@@ -1,7 +1,10 @@
-.container {
+.create-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
   font-size: 16px;
   background-image: linear-gradient(rgba(200,200,200,0.5), rgba(100,100,100,0.5)), url("background_image.png");
-  height: 89vh;
+  height: 91vh;
   h2 {
     text-align: center;
     color: rgb(78,204,163);
