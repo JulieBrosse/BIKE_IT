@@ -9,7 +9,9 @@ Rails.application.routes.draw do
 
   namespace :my do
     resources :bike_rents, only: [:index]
+    resources :bikes, only: [:index]
   end
+
 
 
 end

@@ -29,7 +29,7 @@ class BikesController < ApplicationController
     @bike = Bike.new(bike_params)
     @bike.tenant = current_user
     if @bike.save
-      redirect_to bike_rents_path
+      redirect_to my_bikes_path
     else
       render :new
     end
@@ -44,7 +44,7 @@ class BikesController < ApplicationController
   private
 
   def bike_params
-    params.require(:bike).permit(:title, :description, :price, :availability, :address, :picture,:picture_cache, :tenant_id)
+    params.require(:bike).permit(:title, :description, :price, :availability, :address, :picture, :picture_cache, :tenant_id)
   end
 
 end
