@@ -1,40 +1,67 @@
+.card-blog {
+  margin-top: 30px;
+}
 .card {
 
-  background: white;
-  margin-bottom: 10px;
-  border-radius: 1px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
-  text-align: center;
-  align-items: center;
-  border: 1px solid;
-  align-items: center;
-  justify-content: space-around;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 6px;
+  color: rgba(0, 0, 0, 0.87);
+  background: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 
 }
 .card-header {
-  height: 220px;
   background-size: cover;
   background-position: center;
-
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: -30px;
+  border-radius: 6px;
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 }
+
+
 .card-body {
   height: 140px;
   margin: 10px;
   align-items: center;
   text-justify: center;
   vertical-align: middle;
+  background-color: transparent;
 
-  ul {
-    list-style:none;
-    margin-left:0;
-    padding-left:0;
-
-    li {
-      word-wrap: break-word;
-      text-overflow: ellipsis;
-    }
+  h4 {
+    font-size: 16px;
+    display: block;
+    text-decoration: none;
   }
 
-
-
+  p {
+    font-size: 14px;
+    display: block;
+  }
 }
+
+.card-price {
+  display: block;
+  height: 5px;
+}
+
+.card-caption {
+  height: 15px;
+  margin-top: 15px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.card-description {
+  height: 90px;
+}
+
