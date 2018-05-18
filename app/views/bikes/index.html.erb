@@ -15,7 +15,7 @@
             <div class="card-body">
                 <h4 class="card-caption style="text-decoration:none"> <%= link_to bike.title, bike_path(bike) %></h4>
                 <p class="card-description"> <%= bike.description.truncate_words(25) %></p>
-                <p class="card-price"> <strong> <%= bike.price %>€/day</strong></p>
+                <p class="card-price"><%= bike.price %>€/day</p>
             </div>
         </div>
       </div>
