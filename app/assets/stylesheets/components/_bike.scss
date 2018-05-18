@@ -4,7 +4,7 @@
   object-fit: cover;
 }
 
-.container {
+.bike-content {
   display: flex;
   justify-content: space-around;
   position: absolute;
@@ -23,7 +23,7 @@ body {
   margin-top: 15px;
   position: relative;
   top: 165px;
-  left: 1126px;
+  left: 1180px;
   right: 200px;
   bottom: 20px;
   border-radius: 5px;
@@ -33,7 +33,7 @@ body {
   margin-bottom: 15px;
 }
 
-.row {
+.bike-description {
   margin-left: 30px;
   width: 800px;
 }
