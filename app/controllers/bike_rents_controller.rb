@@ -17,6 +17,7 @@ class BikeRentsController < ApplicationController
   def create
     @bike_rent = BikeRent.new(bike_rents_params)
     @bike_rent.save
+    redirect_to bike_rents_path
   end
 
  # def update
@@ -27,6 +28,6 @@ class BikeRentsController < ApplicationController
  private
 
  def bike_rents_params
-  params.require(:bike).permit(:date, :renter_id, :bike_id)
+  params.require(:bike_rent).permit(:booking_date, :renter_id, :bike_id)
  end
 end

@@ -1,4 +1,5 @@
 class Bike < ApplicationRecord
+  has_many :bike_rents
   validates :title, presence: true
   validates :availability, presence: true
   validates :price, presence: true, allow_blank: false
