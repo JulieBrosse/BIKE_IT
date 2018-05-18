@@ -2,7 +2,7 @@ class BikesController < ApplicationController
 
   def index
 
-    if params[:search].present?
+    if params[:search][:address].present?
       @bikes = Bike.near(params["search"]["address"], 20)
     else
       @bikes = Bike.all

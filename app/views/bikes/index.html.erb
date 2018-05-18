@@ -1,19 +1,22 @@
-<h1>  </h1>
+<div class= "search-form" >
+  <%= simple_form_for :search, url: bikes_path, method: :get, html: { class: 'form-inline' } do |f| %>
+    <%= f.input :address, label: false, input_html: { id: 'button-autocomplete'} %>
+    <%= f.button :submit, class: "btn btn-success vv", value: "Find a bike!" %>
+  <% end %>
+</div>
 
 <div class="content">
   <div class="row">
     <% @bikes.each do |bike| %>
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-        <div class="card text-center">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="card card blog">
             <div class="card-header" style="background-image: url(<%= cl_image_path bike.picture %>);">
             </div>
             <div class="card-body">
-              <ul>
-                <li> <%= link_to bike.title, bike_path(bike) %></li>
-                <li> <%= bike.description.truncate_words(20) %></li>
-                <li> <strong> <%= bike.price %>$/day</strong></li>
-             </ul>
-          </div>
+                <h4 class="card-caption style="text-decoration:none"> <%= link_to bike.title, bike_path(bike) %></h4>
+                <p class="card-description"> <%= bike.description.truncate_words(30) %></p>
+                <p class="card-price"> <strong> <%= bike.price %>€/day</strong></p>
+            </div>
         </div>
       </div>
     <% end %>

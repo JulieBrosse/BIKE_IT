@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
 
   authenticate :user do
-  resources :bike_rents, only: [:index]
-  resources :bikes, only: [:new]
+    resources :bike_rents, only: [:index]
+    resources :bikes, only: [:new]
   end
 end
