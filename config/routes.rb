@@ -5,8 +5,11 @@ Rails.application.routes.draw do
     resources :bike_rents, only: [:new, :create, :update]
   end
 
-  authenticate :user do
+  resources :bike_rents, only: [:index]
+
+  namespace :my do
     resources :bike_rents, only: [:index]
-    resources :bikes, only: [:new]
   end
+
+
 end
