@@ -11,7 +11,6 @@ class BikeRentsController < ApplicationController
 
   def index
     @bike_rents = current_user.bike_rents
-    @bikes_rented = BikeRent.includes(:bike).where(bike: current_user.bikes)
   end
 
   def create
@@ -28,6 +27,6 @@ class BikeRentsController < ApplicationController
  private
 
  def bike_rents_params
-  params.require(:bike_rent).permit(:booking_date, :renter_id, :bike_id)
+  params.require(:bike_rent).permit(:booking_date)
  end
 end
