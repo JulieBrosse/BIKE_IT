@@ -1,12 +1,12 @@
 class BikesController < ApplicationController
 
   def index
-
     if params[:search][:address].present?
       @bikes = Bike.near(params["search"]["address"], 20)
     else
       @bikes = Bike.all
     end
+
     @markers = @bikes.map do |bike|
       {
         lat: bike.latitude,
@@ -31,6 +31,8 @@ class BikesController < ApplicationController
     @bike = Bike.new(bike_params)
       if @bike.save
         redirect_to bike_rents_path
+      # else
+      #   render "New"
       end
   end
 

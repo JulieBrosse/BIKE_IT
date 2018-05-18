@@ -1,4 +1,18 @@
-<% @bikes_rented.each do |bike_rented| %>
-  <%= bike_rented %>
-<% end %>
-
+<div class="rented_bikes">
+  <ul>
+    <% @bikes_rented.each do |bike_rented| %>
+      <li>
+        <%= bike_rented.bike.title %>
+      </li>
+      <li>
+        <p> Date: <%= bike_rented.booking_date %></p>
+      </li>
+      <li>
+        Owner: <%= bike_rented.bike.tenant.name %>
+      </li>
+      <li>
+        <%= cl_image_tag(bike_rented.bike.picture, class: "rented_picture") %>
+      </li>
+    <% end %>
+  </ul>
+</div>

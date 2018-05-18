@@ -1,0 +1,13 @@
+.rented_bikes {
+  display: flex;
+  border: solid 1px gray;
+  width: 500px;
+  margin: 15px;
+  list-style: none;
+
+  .rented_picture {
+    width: 400px;
+
+  }
+
+}

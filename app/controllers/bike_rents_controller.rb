@@ -15,7 +15,7 @@ class BikeRentsController < ApplicationController
   end
 
   def create
-    @bike_rent = BikeRent.find(params[:id])
+    @bike_rent = BikeRent.new(bike_rents_params)
     @bike_rent.save
   end
 
@@ -24,9 +24,9 @@ class BikeRentsController < ApplicationController
  #  @bike_rent.update(bike_rent_params)
  # end
 
- # private
+ private
 
- # def bikes_rent_params
- #  params.require(:bike).permit(:date, :renter_id, :bike_id)
- # end
+ def bike_rents_params
+  params.require(:bike).permit(:date, :renter_id, :bike_id)
+ end
 end
