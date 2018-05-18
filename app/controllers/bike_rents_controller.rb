@@ -15,8 +15,14 @@ class BikeRentsController < ApplicationController
 
   def create
     @bike_rent = BikeRent.new(bike_rents_params)
-    @bike_rent.save
-    redirect_to bike_rents_path
+    @bike_rent.bike = Bike.find(params[:bike_id])
+    @bike_rent.renter = current_user
+
+    if @bike_rent.save
+      redirect_to bike_rents_path
+    else
+      render 'bike/show'
+    end
   end
 
  # def update
